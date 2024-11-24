@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import type { FC } from "hono/jsx";
+import Counter from "./components/counter";
 
 const app = new Hono();
 
@@ -15,6 +16,7 @@ const Top: FC<{ messages: string[] }> = (props: { messages: string[] }) => {
   return (
     <Layout>
       <h1>Hello Hono!</h1>
+      <Counter />
       <ul>
         {props.messages.map((message) => {
           return <li>{message}!!</li>;
